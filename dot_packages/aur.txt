@@ -1,0 +1,15 @@
+authy-snap
+clipman
+downgrade
+i3status-rust-git
+console-blanking
+emacs-gcc-wayland-devel-bin
+k3s-bin
+kind-bin
+peco-bin
+qgnomeplatform
+rancher-k3d-bin
+refind-theme-regular-git
+srb2kart
+yay-bin
+zeal

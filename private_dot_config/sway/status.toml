@@ -1,0 +1,51 @@
+[theme]
+name = "gruvbox-dark"
+
+[icons]
+name = "awesome5"
+
+[[block]]
+block = "music"
+buttons = ["play", "next"]
+
+[[block]]
+block = "backlight"
+
+[[block]]
+block = "temperature"
+interval = 5
+
+[[block]]
+block = "memory"
+interval = 5
+format_mem = "{mem_used_percents}"
+format_swap = "{swap_used_percents}"
+
+[[block]]
+block = "cpu"
+interval = 2
+
+[[block]]
+block = "custom"
+command = ''' echo "{\"icon\":\"net_vpn\",\"state\":\"Info\",\"text\":\"$(curl -sS -m5 -f https://am.i.mullvad.net/country || echo -1)\"}" '''
+json = true
+interval = 600
+
+[[block]]
+block = "net"
+interval = 2
+device = "wlp59s0"
+
+[[block]]
+block = "sound"
+driver = "alsa"
+
+[[block]]
+block = "battery"
+interval = 10
+driver = "upower"
+format = "{percentage} ({power})"
+
+[[block]]
+block = "time"
+interval = 5

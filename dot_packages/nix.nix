@@ -1,0 +1,61 @@
+let
+  pkgs = import <nixpkgs> {};
+  default =
+    [
+      pkgs.aria2
+      pkgs.aspell
+      pkgs.aspell-dict-en
+      pkgs.bat
+      pkgs.cacert # installed with nix (nss-cacert)
+      pkgs.chezmoi
+      pkgs.coreutils
+      pkgs.cowsay
+      pkgs.exa
+      pkgs.exiftool
+      pkgs.fd
+      pkgs.fdupes
+      pkgs.ffmpeg
+      pkgs.figlet
+      pkgs.git-minimal
+      pkgs.gnupg
+      pkgs.gnused
+      pkgs.gopass
+      pkgs.graphicsmagick
+      pkgs.graphviz
+      pkgs.hexyl
+      pkgs.htop
+      pkgs.ipcalc
+      pkgs.iperf
+      pkgs.jq
+      pkgs.jrnl
+      pkgs.kind
+      pkgs.lolcat
+      pkgs.m-cli
+      pkgs.mediainfo
+      pkgs.mosh
+      pkgs.mtr
+      pkgs.ncdu
+      pkgs.neofetch
+      pkgs.nix # installed with nix
+      pkgs.nmap
+      pkgs.openssh
+      pkgs.p7zip
+      pkgs.peco
+      pkgs.pinentry
+      pkgs.ranger
+      pkgs.rclone
+      pkgs.reattach-to-user-namespace
+      pkgs.ripgrep
+      pkgs.shellcheck
+      pkgs.speedtest-cli
+      pkgs.tmux
+      pkgs.darwin.trash
+      pkgs.tree
+      pkgs.vim
+      pkgs.watch
+      pkgs.wireguard-go
+      pkgs.wireguard-tools
+      pkgs.yarn
+    ];
+in
+  default

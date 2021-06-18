@@ -1,0 +1,33 @@
+.packages/
+README.md
+
+{{- if (ne .chezmoi.os "darwin") }}
+.zsh/15.nix.plugin.zsh
+.zsh/20.aspell.plugin.zsh
+.zsh/20.brew.plugin.zsh
+Library/
+{{- end }}
+
+{{- if (ne .chezmoi.os "linux") }}
+.config/chromium-flags.conf
+.config/Code - OSS/
+.config/fontconfig/
+.config/gammastep/
+.config/gtk-3.0/
+.config/Kvantum/
+.config/mako/
+.config/pulse/
+.config/rofi/
+.config/sway/
+.config/swaylock/
+.config/swaynag/
+.config/systemd/
+.gnupg/
+.icons/
+.zlogin
+.zsh/20.java.plugin.zsh
+.zsh/20.keychain.plugin.zsh
+.zsh/20.moz.plugin.zsh
+.zsh/20.qt5.plugin.zsh
+.zsh/20.ssh.plugin.zsh
+{{- end }}
