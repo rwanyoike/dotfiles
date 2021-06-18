@@ -1,0 +1,6 @@
+asciinema
+hachoir[urwid]
+httpie
+pwgen-passphrase
+scapy[basic]
+youtube-dl
