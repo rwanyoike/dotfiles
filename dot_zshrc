@@ -1,0 +1,46 @@
+# Ref: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
+if [[ ${TERM} =~ ^(dumb|tramp)$ ]]; then
+  PS1="$ "
+  unsetopt zle
+  return
+fi
+
+[[ ! -f ${HOME}/.zplug/init.zsh ]] && return
+
+# Ref: https://github.com/zplug/zplug
+source "${HOME}/.zplug/init.zsh"
+
+if [[ ${TERM} != linux ]]; then
+  zplug romkatv/powerlevel10k, as:theme
+fi
+
+zplug zimfw/environment
+zplug zimfw/git
+zplug zimfw/input
+zplug zimfw/termtitle
+zplug zimfw/utility
+
+zplug zsh-users/zsh-autosuggestions
+zplug zsh-users/zsh-completions
+# zsh-history-substring-search must be loaded after zsh-syntax-highlighting
+zplug zsh-users/zsh-history-substring-search, defer:3
+# zsh-syntax-highlighting must be loaded after executing compinit command
+zplug zsh-users/zsh-syntax-highlighting, defer:2
+
+zplug djui/alias-tips
+zplug agkozak/zsh-z
+
+zplug "${HOME}/.zsh", from:local
+
+if ! zplug check --verbose; then
+  printf "Install Zsh plugins? [y/N]: "
+  if read -rq; then
+    echo; zplug install
+  fi
+fi
+
+zplug load
+
+if [[ ${TERM} != linux ]]; then
+  source "${HOME}/.p10k.zsh"
+fi
