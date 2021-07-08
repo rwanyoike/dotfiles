@@ -1,6 +1,18 @@
 # Ref: https://github.com/swaywm/sway/wiki
 
-if [[ $(tty) == /dev/tty1 ]]; then
+function stop_sway {
+  echo "Caught stop_sway"
+  # Ref: ~/.config/sway/config
+  systemctl --user stop sway-session.target
+  trap - INT TERM EXIT
+}
+
+function init_sway {
+  trap stop_sway INT TERM EXIT
   echo "Starting Sway..."
-  (exec systemd-cat --identifier=sway sway)
+  systemd-cat --identifier=sway sway
+}
+
+if [[ $(tty) == /dev/tty1 ]]; then
+  init_sway
 fi

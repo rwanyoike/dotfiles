@@ -113,7 +113,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Audio Controls {{{
 bindsym XF86AudioRaiseVolume exec amixer set Master 2%+
 bindsym XF86AudioLowerVolume exec amixer set Master 2%-
-bindsym XF86AudioMute        exec amixer set Master toggle
+bindsym XF86AudioMute        exec amixer set Master toggle && amixer set Capture toggle
 # }}}
 
 # Backlight Controls {{{
@@ -121,7 +121,14 @@ bindsym XF86MonBrightnessUp   exec light -A 2
 bindsym XF86MonBrightnessDown exec light -U 2
 # }}}
 
+# Media Controls {{{
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+# }}}
+
 # Other Keybindings {{{
+bindsym XF86Search exec $menu
 bindsym --release {
   Print            exec /usr/share/sway/scripts/grimshot copy area
   $mod+Print       exec /usr/share/sway/scripts/grimshot copy screen
@@ -135,7 +142,7 @@ bindsym Ctrl+Shift+Delete  exec swaylock
 # Colors and Customization {{{
 font $font
 floating_modifier $mod normal
-default_border pixel   2
+default_border pixel 2
 
 # Ref: https://github.com/rkubosz/base16-sway
 # class │ border │ background │ text │ indicator │ child_border
@@ -153,9 +160,6 @@ gaps outer 0
 # Autostart {{{
 exec_always dconf write /org/gtk/settings/file-chooser/sort-directories-first true
 # }}}
-
-# Ref: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland
-for_window [shell=".*"] title_format "%title :: %shell"
 
 bar {
   status_command i3status-rs ~/.config/sway/status.toml
@@ -190,9 +194,15 @@ input * {
   tap enabled
 }
 
-for_window [shell=".*"] inhibit_idle fullscreen
-for_window [title="Firefox - Sharing Indicator"] floating enable
-for_window [title="Launch Application"] floating enable
+for_window {
+  [shell=".*"] inhibit_idle fullscreen
+  # Ref: https://github.com/swaywm/sway/wiki#is-an-application-using-xwayland
+  [shell=".*"] title_format "%title :: %shell"
+  [app_id="firefox" title="Firefox — Sharing Indicator"] kill
+  [app_id="firefox" title="^Extension: \(Tree Style Tab\)"] floating enable
+  [app_id="firefox" title="Launch Application"] floating enable
+  [app_id="zenity"] floating enable
+}
 
 include ~/.config/sway/hosts/`hostname`
 # Set DISPLAY/WAYLAND_DISPLAY in the systemd user environment
