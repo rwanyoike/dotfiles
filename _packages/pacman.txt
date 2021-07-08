@@ -1,7 +1,6 @@
 alacritty
 alsa-utils
 android-tools
-android-udev
 arch-install-scripts
 arch-wiki-docs
 aria2
@@ -10,17 +9,15 @@ audacity
 base
 bat
 bbswitch-dkms
-beancount
 bind
-blueberry
 bluez-utils
 bookworm
 breeze
+chezmoi
 chromium
 clinfo
 code
 cowsay
-deadbeef
 dialog
 dmidecode
 dnscrypt-proxy
@@ -28,7 +25,6 @@ dnsmasq
 docker-compose
 ebtables
 edk2-ovmf
-emacs
 evince
 exa
 exfat-utils
@@ -48,6 +44,8 @@ grim
 hexyl
 htop
 imagemagick
+hunspell-en_us
+i3-wm
 imv
 inetutils
 inkscape
@@ -58,12 +56,13 @@ intel-undervolt
 iotop
 ipcalc
 iperf3
-jdownloader2
-jre8-openjdk-headless
 keychain
 kubectl
+kmon
 kubectx
 kvantum-qt5
+lazygit
+lib32-libpulse
 libreoffice-fresh
 libva-intel-driver
 libva-utils
@@ -90,7 +89,6 @@ mpv
 mtr
 ncdu
 neofetch
-nerd-fonts-jetbrains-mono
 netdata
 nethogs
 nfs-utils
@@ -102,12 +100,14 @@ pacutils
 pavucontrol
 perl-image-exiftool
 perl-rename
+playerctl
 polkit-gnome
 postgresql-libs
 powertop
 pqiv
 progress
 pulseaudio-alsa
+pulseaudio-bluetooth
 qemu
 ranger
 rclone
@@ -121,6 +121,7 @@ smartmontools
 speedtest-cli
 sshfs
 strace
+supertuxkart
 sway
 swayidle
 swaylock
@@ -139,7 +140,6 @@ tmux
 transmission-cli
 trash-cli
 tree
-ttf-font-awesome
 ttf-hack
 ttf-jetbrains-mono
 ttf-joypixels
@@ -150,6 +150,7 @@ virt-manager
 virtualbox
 wavemon
 wf-recorder
+wine
 wireguard-tools
 wireshark-qt
 wpa_supplicant
@@ -159,4 +160,5 @@ xorg-xev
 xorg-xwayland
 yarn
 yq
+zenity
 zsh

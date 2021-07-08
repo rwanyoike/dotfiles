@@ -2,7 +2,7 @@
 name = "gruvbox-dark"
 
 [icons]
-name = "awesome5"
+name = "material-nf"
 
 [[block]]
 block = "music"
@@ -34,16 +34,19 @@ interval = 600
 [[block]]
 block = "net"
 interval = 2
-device = "wlp59s0"
 
 [[block]]
 block = "sound"
-driver = "alsa"
+max_vol = 100
+device_kind = "source"
+
+[[block]]
+block = "sound"
+max_vol = 100
 
 [[block]]
 block = "battery"
 interval = 10
-driver = "upower"
 format = "{percentage} ({power})"
 
 [[block]]

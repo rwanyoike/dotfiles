@@ -1,4 +1,4 @@
-.packages/
+_packages/
 README.md
 
 {{- if (ne .chezmoi.os "darwin") }}
