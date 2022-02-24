@@ -29,10 +29,11 @@ interval = 2
 block = "custom"
 command = ''' echo "{\"icon\":\"net_vpn\",\"state\":\"Info\",\"text\":\"$(curl -sS -m5 -f https://am.i.mullvad.net/country || echo -1)\"}" '''
 json = true
-interval = 600
+interval = 150
 
 [[block]]
 block = "net"
+format_alt = "{ssid} {signal_strength}"
 interval = 2
 
 [[block]]

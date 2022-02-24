@@ -1,7 +1,7 @@
 # Ref: https://github.com/swaywm/sway/wiki
 
 function stop_sway {
-  echo "Caught stop_sway"
+  echo "Stopping Sway..."
   # Ref: ~/.config/sway/config
   systemctl --user stop sway-session.target
   trap - INT TERM EXIT

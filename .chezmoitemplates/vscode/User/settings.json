@@ -4,7 +4,6 @@
   "editor.fontLigatures": true,
   "editor.quickSuggestions": { "strings": true },
   "editor.renderControlCharacters": true,
-  "editor.renderIndentGuides": true,
   "editor.renderWhitespace": "all",
   "editor.rulers": [80, 88, 120],
   "extensions.ignoreRecommendations": true,
