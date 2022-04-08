@@ -1,10 +1,13 @@
+aws-cli-v2-bin
 code-features
 code-marketplace
 console-blanking
 emacs-gcc-wayland-devel-bin
+google-cloud-sdk
 i3status-rust-git
 k3s-bin
 kind-bin
+mullvad-vpn-bin
 rancher-k3d-bin
 refind-theme-regular-git
 srb2kart
