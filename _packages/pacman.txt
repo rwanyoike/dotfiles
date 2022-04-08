@@ -19,6 +19,7 @@ breeze
 buildah
 calibre
 catatonit
+cdrtools
 chezmoi
 chromium
 clinfo
@@ -71,6 +72,7 @@ intel-undervolt
 iotop
 ipcalc
 iperf3
+iwd
 jdownloader2
 jrnl
 keychain
@@ -151,7 +153,6 @@ swaylock
 syncthing
 sysstat
 systemd-resolvconf
-systemd-swap
 tailscale
 tcpdump
 terminus-font
@@ -173,6 +174,7 @@ vim
 vinagre
 virt-manager
 virtualbox
+vnstat
 wavemon
 wf-recorder
 wine
@@ -187,4 +189,5 @@ yarn
 yay
 yq
 zenity
+zram-generator
 zsh
