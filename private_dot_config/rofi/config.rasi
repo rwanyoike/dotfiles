@@ -1,6 +1,7 @@
 configuration {
-  theme: "gruvbox-dark";
   modi: "window,run,drun";
   show-icons: true;
   sidebar-mode: true;
 }
+
+@theme "gruvbox-dark"

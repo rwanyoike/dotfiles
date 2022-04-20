@@ -1,5 +1,4 @@
 {
-  "docker.showStartPage": false,
   "editor.emptySelectionClipboard": false,
   "editor.fontLigatures": true,
   "editor.quickSuggestions": { "strings": true },

@@ -47,7 +47,6 @@ fd
 fdupes
 figlet
 firefox
-firewalld
 fwupd
 gammastep
 gdb
@@ -177,6 +176,7 @@ virtualbox
 vnstat
 wavemon
 wf-recorder
+whois
 wine
 wireguard-tools
 wireshark-qt
@@ -188,6 +188,7 @@ xorg-xwayland
 yarn
 yay
 yq
+zeal-git
 zenity
 zram-generator
 zsh
