@@ -11,4 +11,3 @@ mullvad-vpn-bin
 rancher-k3d-bin
 refind-theme-regular-git
 srb2kart
-zeal
