@@ -13,11 +13,11 @@ block = "backlight"
 
 [[block]]
 block = "temperature"
-interval = 5
+interval = 4
 
 [[block]]
 block = "memory"
-interval = 5
+interval = 4
 format_mem = "{mem_used_percents}"
 format_swap = "{swap_used_percents}"
 
@@ -52,4 +52,4 @@ format = "{percentage} ({power})"
 
 [[block]]
 block = "time"
-interval = 5
+interval = 4
