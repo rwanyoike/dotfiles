@@ -1,5 +1,5 @@
 [core]
-	excludesfile = ignore
+  excludesfile = ignore
 
 [include]
-	path = config.user
+  path = config.user
