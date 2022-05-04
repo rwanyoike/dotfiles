@@ -4,7 +4,6 @@ code-marketplace
 console-blanking
 emacs-gcc-wayland-devel-bin
 google-cloud-sdk
-i3status-rust-git
 k3s-bin
 kind-bin
 mullvad-vpn-bin
