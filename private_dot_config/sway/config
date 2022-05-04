@@ -157,10 +157,6 @@ gaps inner 10
 gaps outer 0
 # }}}
 
-# Autostart {{{
-exec_always dconf write /org/gtk/settings/file-chooser/sort-directories-first true
-# }}}
-
 bar {
   status_command i3status-rs ~/.config/sway/status.toml
   height 30

@@ -1,15 +1,18 @@
-_packages/
+lists/
+scripts/
+
 README.md
+scripts.sh
 
 {{- if (ne .chezmoi.os "darwin") }}
+Library/
+
 .zsh/15.nix.plugin.zsh
 .zsh/20.aspell.plugin.zsh
 .zsh/20.brew.plugin.zsh
-Library/
 {{- end }}
 
 {{- if (ne .chezmoi.os "linux") }}
-.config/chromium-flags.conf
 .config/Code - OSS/
 .config/fontconfig/
 .config/gammastep/
@@ -24,6 +27,8 @@ Library/
 .config/systemd/
 .gnupg/
 .icons/
+
+.config/chromium-flags.conf
 .zlogin
 .zsh/20.java.plugin.zsh
 .zsh/20.keychain.plugin.zsh
