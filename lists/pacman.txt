@@ -27,6 +27,7 @@ clipman
 conntrack-tools
 container-diff
 cowsay
+dconf-editor
 deadbeef-mpris2-plugin
 dialog
 dive
@@ -51,7 +52,7 @@ fwupd
 gammastep
 gdb
 gimp
-gnome-bluetooth
+gnome-bluetooth-3.0
 gnome-themes-extra
 gopass
 gramps
@@ -59,6 +60,7 @@ grim
 hexyl
 htop
 hunspell-en_us
+i3status-rust
 i3-wm
 imagemagick
 imv
@@ -145,6 +147,7 @@ smartmontools
 speedtest-cli
 sshfs
 strace
+s-tui
 supertuxkart
 sway
 swayidle
@@ -175,6 +178,7 @@ virt-manager
 virtualbox
 vnstat
 wavemon
+wev-git
 wf-recorder
 whois
 wine
