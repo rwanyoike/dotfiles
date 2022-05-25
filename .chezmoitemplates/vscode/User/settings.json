@@ -19,7 +19,7 @@
 {{- else }}
   "editor.fontFamily": "Monospace",
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 0.9,
+  "window.zoomLevel": 0.8,
 {{- end }}
   "shellcheck.customArgs": [
     "-x"

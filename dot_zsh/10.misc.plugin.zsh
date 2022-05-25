@@ -1,6 +1,6 @@
 # Ref: http://zsh.sourceforge.net/Doc/Release/Parameters.html
 # The file to save the history in when an interactive shell exits
-HISTFILE="${HOME}/Sync/zhistory"
+HISTFILE="${HOME}/sync/zhistory"
 # The maximum number of events stored in the internal history list
 HISTSIZE=51200
 # The maximum number of history events to save in the history file

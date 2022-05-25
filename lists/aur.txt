@@ -1,9 +1,7 @@
-aws-cli-v2-bin
 code-features
 code-marketplace
 console-blanking
 emacs-gcc-wayland-devel-bin
-google-cloud-sdk
 k3s-bin
 kind-bin
 mullvad-vpn-bin

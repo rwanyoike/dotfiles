@@ -1,0 +1,10 @@
+// Ref: https://github.com/swaywm/sway/issues/4250#issuecomment-1066195162
+//      https://github.com/swaywm/sway/issues/4397#issuecomment-516363069
+//      https://switchandclick.com/ansi-vs-iso-layout/
+
+partial alphanumeric_keys
+
+xkb_symbols "basic" {
+  include "us"
+  replace key <LSGT> { [ Shift_L ] };
+};
