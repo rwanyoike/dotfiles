@@ -13,7 +13,6 @@ bat
 bbswitch-dkms
 bind
 bluez-utils
-bookworm
 borg
 breeze
 buildah
@@ -30,12 +29,14 @@ cowsay
 dconf-editor
 deadbeef-mpris2-plugin
 dialog
+diff-so-fancy
 dive
 dmidecode
 dnscrypt-proxy
 dnsmasq
 docker-compose
 downgrade
+duf
 ebtables
 edk2-ovmf
 epiphany
@@ -48,6 +49,7 @@ fd
 fdupes
 figlet
 firefox
+foliate
 fwupd
 gammastep
 gdb
@@ -132,8 +134,8 @@ progress
 pulseaudio-alsa
 qbittorrent
 qbittorrent-nox
-qemu
-qgnomeplatform
+qemu-desktop
+qgnomeplatform-qt5
 qt6-wayland
 ranger
 rclone
@@ -150,6 +152,7 @@ strace
 s-tui
 supertuxkart
 sway
+swaybg
 swayidle
 swaylock
 syncthing
