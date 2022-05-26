@@ -48,3 +48,6 @@ export vblank_mode=0
 export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets line)
 # Ref: https://github.com/djui/alias-tips
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
+
+# Ref: https://github.com/pipxproject/pipx
+export PATH="${PATH}:${HOME}/.local/bin"
