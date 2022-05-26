@@ -1,6 +1,14 @@
+# binding options
+on-button-left=exec makoctl menu -n "$id" rofi -dmenu -p 'Select action'
+
+# style options
 font=Monospace 10
+background-color=#1d2021
+text-color=#ebdbb2
 width=500
 height=200
 border-color=#ebdbb2
-background-color=#1d2021
-text-color=#ebdbb2
+
+# modes
+[mode=do-not-disturb]
+invisible=1
