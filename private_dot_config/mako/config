@@ -9,6 +9,6 @@ width=500
 height=200
 border-color=#ebdbb2
 
-# modes
+# mode options
 [mode=do-not-disturb]
 invisible=1
