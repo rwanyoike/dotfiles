@@ -1,4 +1,5 @@
 {
+  "cSpell.language": "en-GB",
   "editor.emptySelectionClipboard": false,
   "editor.fontLigatures": true,
   "editor.quickSuggestions": { "strings": true },
@@ -12,7 +13,7 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "search.searchOnType": false,
   "workbench.colorTheme": "Gruvbox Dark Hard",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
 {{- if (eq .chezmoi.os "darwin") }}
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.external.osxExec": "Alacritty.app",
@@ -21,7 +22,4 @@
   "window.menuBarVisibility": "toggle",
   "window.zoomLevel": 0.8,
 {{- end }}
-  "shellcheck.customArgs": [
-    "-x"
-  ]
 }
