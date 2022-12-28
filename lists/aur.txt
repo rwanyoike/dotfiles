@@ -1,7 +1,6 @@
 code-features
 code-marketplace
 console-blanking
-emacs-gcc-wayland-devel-bin
 k3s-bin
 kind-bin
 mullvad-vpn-bin
