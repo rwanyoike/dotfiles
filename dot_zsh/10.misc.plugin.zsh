@@ -23,31 +23,3 @@ bindkey "${terminfo[kcud1]}" history-substring-search-down
 # Improve on-line help provided by the shell
 unalias run-help
 autoload -U run-help
-
-# Ref: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-#      https://wiki.archlinux.org/title/XDG_Base_Directory
-# Where user-specific configurations should be written
-export XDG_CONFIG_HOME="${HOME}/.config"
-# Where user-specific non-essential (cached) data should be written
-export XDG_CACHE_HOME="${HOME}/.cache"
-# Where user-specific data files should be written
-export XDG_DATA_HOME="${HOME}/.local/share"
-# Where user-specific state files should be written
-export XDG_STATE_HOME="${HOME}/.local/state"
-
-# Ref: https://wiki.archlinux.org/index.php/Environment_variables
-# Command to run the lightweight program used for editing files
-export EDITOR=vim
-# Command to run the full-fledged editor that is used for more demanding tasks
-export VISUAL="${EDITOR}"
-
-# Ref: https://github.com/swaywm/sway/issues/3716#issuecomment-503991671
-export vblank_mode=0
-
-# Ref: https://github.com/zsh-users/zsh-syntax-highlighting
-export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets line)
-# Ref: https://github.com/djui/alias-tips
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
-
-# Ref: https://github.com/pipxproject/pipx
-export PATH="${PATH}:${HOME}/.local/bin"
