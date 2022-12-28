@@ -1,0 +1,101 @@
+# Ref: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
+if [[ ${TERM} == "dumb" ]]; then
+  PS1="$ "
+  unsetopt zle
+  return
+fi
+
+# Ref: https://github.com/kovidgoyal/kitty/issues/1791
+#      https://github.com/kovidgoyal/kitty/issues/2475
+alias ssh="TERM=xterm-256color ssh"
+alias mssh="TERM=xterm-256color mssh"
+
+{{- if (eq .chezmoi.hostname "hal9000") }}
+
+if [[ ! -f ${HOME}/.zplug/init.zsh ]]; then
+  return
+fi
+
+# Ref: https://github.com/zplug/zplug
+source "${HOME}/.zplug/init.zsh"
+
+if [[ ${TERM} != linux ]]; then
+  zplug romkatv/powerlevel10k, as:theme
+fi
+
+zplug zimfw/environment
+zplug zimfw/git
+zplug zimfw/input
+zplug zimfw/termtitle
+zplug zimfw/utility
+
+zplug zsh-users/zsh-autosuggestions
+zplug zsh-users/zsh-completions
+# zsh-history-substring-search must be loaded after zsh-syntax-highlighting
+zplug zsh-users/zsh-history-substring-search, defer:3
+# zsh-syntax-highlighting must be loaded after executing compinit command
+zplug zsh-users/zsh-syntax-highlighting, defer:2
+
+zplug agkozak/zsh-z
+zplug djui/alias-tips
+zplug plugins/asdf, from:oh-my-zsh
+
+zplug "${HOME}/.zsh", from:local
+
+if ! zplug check --verbose; then
+  printf "Install Zsh plugins? [y/N]: "
+  if read -rq; then
+    echo; zplug install
+  fi
+fi
+
+zplug load
+
+if [[ ${TERM} != linux ]]; then
+  source "${HOME}/.p10k.zsh"
+fi
+{{- else }}
+
+HISTFILE="${HOME}/.zhistory"
+HISTSIZE=51200
+SAVEHIST="${HISTSIZE}"
+
+# Ref: http://zsh.sourceforge.net/Doc/Release/Options.html
+setopt HIST_SAVE_NO_DUPS
+# Ref: https://github.com/zimfw/environment/blob/master/init.zsh
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+
+# Ref: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
+# plugins=(z)
+source "${ZSH}/oh-my-zsh.sh"
+
+# awscli2
+fpath=("${HOME}/.nix-profile/share/zsh/site-functions" ${fpath})
+autoload -Uz compinit && compinit
+source "${HOME}/.nix-profile/share/zsh/site-functions/aws_zsh_completer.sh"
+
+# Ref: https://github.com/junegunn/fzf
+source "${HOME}/.nix-profile/share/fzf/completion.zsh"
+source "${HOME}/.nix-profile/share/fzf/key-bindings.zsh"
+
+# Ref: https://github.com/sharkdp/bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+alias cat=bat
+alias bathelp="bat --plain --language=help"
+help() {
+    "$@" --help 2>&1 | bathelp
+}
+
+# Ref: https://github.com/ogham/exa
+alias ls=exa
+
+# Ref: https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
+# Ref: https://github.com/starship/starship
+eval "$(starship init zsh)"
+{{- end }}

@@ -12,7 +12,6 @@ bind
 blueberry
 bluez-utils
 breeze
-buildah
 calibre
 cdrtools
 chezmoi
@@ -20,12 +19,16 @@ chromium
 clipman
 conntrack-tools
 cowsay
+curlie
 dconf-editor
 deadbeef-mpris2-plugin
 dialog
 diff-so-fancy
 dmidecode
 dnscrypt-proxy
+docker
+docker-buildx
+docker-compose
 downgrade
 duf
 ethtool
@@ -50,7 +53,7 @@ grim
 hexyl
 htop
 httpie
-hunspell-en_us
+hunspell-en_gb
 i3status-rust
 i3-wm
 imagemagick
@@ -113,7 +116,6 @@ peco
 perl-image-exiftool
 perl-rename
 playerctl
-podman-compose
 polkit-gnome
 postgresql-libs
 powertop
