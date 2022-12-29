@@ -1,7 +1,7 @@
 # Ref: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 #      https://wiki.archlinux.org/title/XDG_Base_Directory
-export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
@@ -10,11 +10,6 @@ export EDITOR=vim
 export VISUAL="${EDITOR}"
 
 export PATH="${HOME}/.local/bin:${PATH}"
-
-# Ref: https://github.com/funtoo/keychain
-if command -v keychain &> /dev/null; then
-  eval "$(keychain --eval --systemd)"
-fi
 
 {{- if (eq .chezmoi.hostname "hal9000") }}
 
@@ -50,6 +45,7 @@ export MOZ_DBUS_REMOTE=1
 export QT_QPA_PLATFORM=wayland-egl
 export QT_QPA_PLATFORMTHEME=gnome
 export QT_STYLE_OVERRIDE=kvantum-dark
+
 {{- else }}
 
 # Ref: https://github.com/NixOS/nix
@@ -62,5 +58,8 @@ export LOCALE_ARCHIVE="${HOME}/.nix-profile/lib/locale/locale-archive"
 # Ref: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 export ZSH="${HOME}/.nix-profile/share/oh-my-zsh"
 
-export TERM=tmux-256color
+# export TERM=tmux-256color
 {{- end }}
+
+# Ref: https://github.com/funtoo/keychain
+eval "$(keychain --eval --systemd)"

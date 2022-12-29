@@ -1,7 +1,7 @@
 # Ref: https://www.gnu.org/software/emacs/manual/html_node/tramp/Frequently-Asked-Questions.html
-if [[ ${TERM} == "dumb" ]]; then
-  PS1="$ "
+if [[ ${TERM} == dumb ]]; then
   unsetopt zle
+  PS1="$ "
   return
 fi
 
@@ -11,10 +11,6 @@ alias ssh="TERM=xterm-256color ssh"
 alias mssh="TERM=xterm-256color mssh"
 
 {{- if (eq .chezmoi.hostname "hal9000") }}
-
-if [[ ! -f ${HOME}/.zplug/init.zsh ]]; then
-  return
-fi
 
 # Ref: https://github.com/zplug/zplug
 source "${HOME}/.zplug/init.zsh"
@@ -54,6 +50,7 @@ zplug load
 if [[ ${TERM} != linux ]]; then
   source "${HOME}/.p10k.zsh"
 fi
+
 {{- else }}
 
 HISTFILE="${HOME}/.zhistory"
