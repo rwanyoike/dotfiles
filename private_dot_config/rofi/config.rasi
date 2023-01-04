@@ -1,7 +1,8 @@
+@theme "gruvbox-dark"
+
 configuration {
-  modi: "window,run,drun";
+  modes: "window,run,drun";
   show-icons: true;
   sidebar-mode: true;
+  terminal: "alacritty";
 }
-
-@theme "gruvbox-dark"

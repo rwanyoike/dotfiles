@@ -1,9 +1,4 @@
-code-features
-code-marketplace
-console-blanking
-k3s-bin
-kind-bin
-mullvad-vpn-bin
-rancher-k3d-bin
-refind-theme-regular-git
-srb2kart
+kvantum-theme-libadwaita-git
+rofi-calc-git
+ventoy-bin
+visual-studio-code-bin

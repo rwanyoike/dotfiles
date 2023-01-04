@@ -1,0 +1,45 @@
+# Ref: https://zsh.sourceforge.io/Doc/Release/Parameters.html
+HISTFILE="${HOME}/.zsh_history"
+SAVEHIST=51200
+HISTSIZE=$(( SAVEHIST * 20 / 100 + SAVEHIST ))
+
+# Ref: https://github.com/ohmyzsh/ohmyzsh
+plugins=(zsh-exa)
+source "${ZSH}/oh-my-zsh.sh"
+
+# Ref: https://github.com/atuinsh/atuin
+eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+
+# Ref: https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
+# Ref: https://github.com/jdx/mise
+eval "$(mise activate zsh)"
+
+# Ref: https://github.com/romkatv/powerlevel10k
+source "${HOME}/.nix-profile/share/zsh-powerlevel10k/powerlevel10k.zsh-theme"
+source "${HOME}/.p10k.zsh"
+
+# Ref: https://github.com/MichaelAquilina/zsh-you-should-use
+source "${HOME}/.nix-profile/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh"
+
+# Ref: https://github.com/zsh-users/zsh-autosuggestions
+source "${HOME}/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# Ref: https://github.com/zsh-users/zsh-syntax-highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+# zsh-syntax-highlighting must be loaded after executing compinit command
+source "${HOME}/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Ref: https://github.com/zsh-users/zsh-history-substring-search
+# zsh-history-substring-search must be loaded after zsh-syntax-highlighting
+source "${HOME}/.nix-profile/share/zsh-history-substring-search/zsh-history-substring-search.zsh"
+bindkey "${terminfo[kcuu1]}" history-substring-search-up
+bindkey "${terminfo[kcud1]}" history-substring-search-down
+
+# Ref: https://github.com/sharkdp/bat
+alias cat="bat --paging=never"
+alias bathelp="bat --plain --language=help"
+help() {
+  "$@" --help 2>&1 | bathelp
+}

@@ -1,55 +1,25 @@
 lists/
-scripts/
 
 README.md
-scripts.sh
 
-{{- if (ne .chezmoi.os "darwin") }}
+{{- if .headless }}
 
-Library/
+*
 
-.zsh/15.nix.plugin.zsh
-.zsh/20.aspell.plugin.zsh
-.zsh/20.brew.plugin.zsh
-
-{{- if (ne .chezmoi.hostname "hal9000") }}
-
-.config/fontconfig/
-.config/gammastep/
-.config/gtk-3.0/
-.config/Kvantum/
-.config/mako/
-.config/rofi/
-.config/sway/
-.config/swaylock/
-.config/swaynag/
-.config/systemd/
-.icons/
-
-.config/chromium-flags.conf
-.zlogin
-
-{{- end }}
-
-{{- end }}
-
-{{- if (ne .chezmoi.os "linux") }}
-
-.config/Code - OSS/
-.config/fontconfig/
-.config/gammastep/
-.config/gtk-3.0/
-.config/Kvantum/
-.config/mako/
-.config/rofi/
-.config/sway/
-.config/swaylock/
-.config/swaynag/
-.config/systemd/
-.gnupg/
-.icons/
-
-.config/chromium-flags.conf
-.zlogin
+!.config/
+!.ssh/
+!.local
+!.p10k.zsh
+!.sqliterc
+!.terraformrc
+!.tmux
+!.tmux.conf
+!.tmux.conf.local
+!.vim_runtime
+!.vimrc
+!.vimrc.local
+!.zlogout
+!.zprofile
+!.zshrc
 
 {{- end }}

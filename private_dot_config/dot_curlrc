@@ -1,0 +1,28 @@
+# Ref: https://ec.haxx.se/cmdline/cmdline-configfile
+
+# Maximum time in seconds that you allow curl's connection to take
+connect-timeout = 15
+
+# If the server reports that the requested page has moved to a different
+# location (indicated with a Location: header and a 3XX response code), this
+# option will make curl redo the request on the new place
+location
+
+# Make curl automatically set the previous URL when it follows a Location:
+# header
+referer = ";auto"
+
+# Make curl attempt to figure out the timestamp of the remote file, and if that
+# is available make the local file get that same timestamp
+remote-time
+
+# If a transient error is returned when curl tries to perform a transfer, it
+# will retry this number of times before giving up
+retry = 5
+
+# In addition to the other conditions, consider ECONNREFUSED as a transient
+# error too for retry
+retry-connrefused
+
+# The User-Agent string to send to the HTTP server
+user-agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:72.0) Gecko/20100101 Firefox/72.0"

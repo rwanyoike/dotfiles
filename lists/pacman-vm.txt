@@ -1,0 +1,9 @@
+archlinuxcn-keyring
+base
+linux-lts
+man-db
+openssh
+tailscale
+vim
+yay
+zsh

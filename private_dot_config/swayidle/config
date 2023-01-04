@@ -1,0 +1,7 @@
+before-sleep "playerctl pause; swaylock -f"
+lock "swaylock -f"
+# unlock pkill -USR1 swaylock
+timeout 290 "notify-send -u critical -t 9900 'Locking in 10 seconds'"
+timeout 300 "swaylock -f"
+timeout 600 "swaymsg 'output * power off'" resume "swaymsg 'output * power on'"
+idlehint 900

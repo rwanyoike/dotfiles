@@ -1,0 +1,66 @@
+[theme]
+theme = "gruvbox-dark"
+
+[icons]
+icons = "material-nf"
+
+[[block]]
+block = "privacy"
+[[block.driver]]
+name = "pipewire"
+display = "nickname"
+[[block.driver]]
+name = "v4l"
+
+[[block]]
+block = "music"
+format = " $icon {$combo.str(max_w:25,rot_interval:0.5) $play $next|} "
+
+[[block]]
+block = "backlight"
+minimum = 2
+step_width = 2
+
+[[block]]
+block = "temperature"
+format = " $icon $average "
+format_alt = " $icon $average avg, $max max "
+
+[[block]]
+block = "cpu"
+format_alt = " $icon $barchart $utilization "
+
+[[block]]
+block = "memory"
+format = " $icon $mem_used_percents "
+format_alt = " $icon_swap $swap_used_percents "
+
+[[block]]
+block = "external_ip"
+format = " $country_flag $country_code_iso3 "
+interval = 600 # 10m
+
+[[block]]
+block = "net"
+format = " $icon ^icon_net_down $speed_down.eng(prefix:K) ^icon_net_up $speed_up.eng(prefix:K) "
+format_alt = " $icon {$signal_strength $ssid|} "
+
+[[block]]
+block = "sound"
+device_kind = "source"
+max_vol = 100
+
+[[block]]
+block = "sound"
+max_vol = 100
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "battery"
+format = " $icon $percentage ($power) "
+full_format = " $icon ($power) "
+
+[[block]]
+block = "time"

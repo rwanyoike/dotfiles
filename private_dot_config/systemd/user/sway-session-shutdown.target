@@ -1,0 +1,10 @@
+# Ref: https://github.com/alebastr/sway-systemd
+
+[Unit]
+Description=Shutdown Sway session
+DefaultDependencies=no
+StopWhenUnneeded=true
+Conflicts=graphical-session.target graphical-session-pre.target
+After=graphical-session.target graphical-session-pre.target
+Conflicts=sway-session.target
+After=sway-session.target
