@@ -1,0 +1,26 @@
+{
+  // "editor.emptySelectionClipboard": false,
+  "editor.fontFamily": "{{ .font.fixed }}",
+  "editor.fontLigatures": true,
+  // "editor.quickSuggestions": { "strings": true },
+  // "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 88, 120],
+  "extensions.ignoreRecommendations": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  // "search.searchOnType": false,
+  "telemetry.telemetryLevel": "off",
+  // "window.menuBarVisibility": "toggle",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 0.25,
+{{- else }}
+  // "terminal.integrated.inheritEnv": false,
+{{- end }}
+  "window.zoomLevel": 1.1
+}

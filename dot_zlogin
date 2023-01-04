@@ -1,18 +1,3 @@
-# Ref: https://github.com/swaywm/sway/wiki
-
-function stop_sway {
-  echo "Stopping Sway..."
-  # Ref: ~/.config/sway/config
-  systemctl --user stop sway-session.target
-  trap - INT TERM EXIT
-}
-
-function init_sway {
-  trap stop_sway INT TERM EXIT
-  echo "Starting Sway..."
-  systemd-cat --identifier=sway sway
-}
-
 if [[ $(tty) == /dev/tty1 ]]; then
-  init_sway
+  systemd-cat --identifier=sway sway
 fi

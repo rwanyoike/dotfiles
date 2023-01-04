@@ -1,0 +1,13 @@
+# Ref: https://www.sqlite.org/cli.html
+
+# Turn display of headers on or off
+.header on
+
+# Set output mode
+.mode column
+
+# Set text string for NULL values. Default ''
+.nullvalue NULL
+
+# Turn SQL timer on or off
+.timer on

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+# dconf.ini hash: {{ includeTemplate "lists/dconf.ini.tmpl" . | sha256sum }}
+dconf load / <<EOF
+{{ includeTemplate "lists/dconf.ini.tmpl" . }}
+EOF

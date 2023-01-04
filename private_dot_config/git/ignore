@@ -3,17 +3,6 @@
 .idea/
 *.iws
 
-# macOS -----------------------------------------------------------------------
-
-*.DS_Store
-
-# Version Management ----------------------------------------------------------
-
-.go-version
-.node-version
-.python-version
-.ruby-version
-
 # Visual Studio Code ----------------------------------------------------------
 
 .vscode/

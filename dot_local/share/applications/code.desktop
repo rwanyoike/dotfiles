@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Visual Studio Code
+GenericName=Text Editor
+# Ref: https://wiki.archlinux.org/title/Wayland
+Exec=env ELECTRON_OZONE_PLATFORM_HINT=auto code %F
+Icon=visual-studio-code
+Categories=TextEditor;Development;IDE;
+MimeType=text/plain;inode/directory;application/x-code-workspace;
+Keywords=vscode;

@@ -1,0 +1,44 @@
+# Ref: https://github.com/doomemacs/doomemacs
+# [".config/emacs"]
+# type = "git-repo"
+# url = "https://github.com/doomemacs/doomemacs"
+# clone.args = ["--depth", "1"]
+
+# Ref: https://github.com/yazi-rs/plugins
+[".config/yazi/plugins"]
+type = "archive"
+url = "https://github.com/yazi-rs/plugins/archive/refs/heads/main.tar.gz"
+stripComponents = 1
+include = ["*/full-border.yazi/**"]
+refreshPeriod = "672h"
+
+# Ref: https://github.com/imsi32/yatline.yazi
+[".config/yazi/plugins/yatline.yazi"]
+type = "archive"
+url = "https://github.com/imsi32/yatline.yazi/archive/refs/heads/main.tar.gz"
+stripComponents = 1
+refreshPeriod = "672h"
+
+# Ref: https://github.com/ryanoasis/nerd-fonts
+[".local/share/fonts/nerd-fonts-jetbrains-mono"]
+type = "archive"
+url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.tar.xz"
+exact = true
+
+# Ref: https://github.com/ritchies/zsh-exa
+[".oh-my-zsh/custom/plugins/zsh-exa"]
+type = "git-repo"
+url = "https://github.com/ritchies/zsh-exa.git"
+refreshPeriod = "672h"
+
+# Ref: https://github.com/gpakosz/.tmux
+[".tmux"]
+type = "git-repo"
+url = "https://github.com/gpakosz/.tmux.git"
+refreshPeriod = "672h"
+
+# Ref: https://github.com/amix/vimrc
+[".vim_runtime"]
+type = "git-repo"
+url = "https://github.com/amix/vimrc.git"
+refreshPeriod = "672h"

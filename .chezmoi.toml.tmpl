@@ -1,0 +1,13 @@
+{{- $name := promptStringOnce . "name" "Name (user.name)" -}}
+{{- $email := promptStringOnce . "email" "Email address (user.email)" -}}
+{{- $headless := promptBoolOnce . "headless" "Is this machine headless" -}}
+
+[data]
+name = {{ $name | quote }}
+email = {{ $email | quote }}
+headless = {{ $headless }}
+
+[data.font]
+fixed = "Monospace"
+general = "Sans Serif"
+size = 11

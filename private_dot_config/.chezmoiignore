@@ -1,0 +1,16 @@
+{{- if .headless }}
+
+*
+
+!bat/
+!doom/
+!emacs/
+!environment.d/
+!fontconfig/
+!git/
+!lazygit/
+!tmux/
+
+!.curlrc
+
+{{- end }}

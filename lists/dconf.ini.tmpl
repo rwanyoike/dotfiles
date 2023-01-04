@@ -1,0 +1,29 @@
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+font-name='{{ .font.general }} {{ .font.size }}'
+gtk-theme='adw-gtk3-dark'
+monospace-font-name='{{ .font.fixed }} {{ .font.size }}'
+
+[org/gtk/settings/file-chooser]
+sort-directories-first=true
+
+[org/virt-manager/virt-manager/connections]
+autoconnect=['qemu:///session']
+uris=['qemu:///session']
+
+[org/virt-manager/virt-manager/console]
+scaling=2
+
+[org/virt-manager/virt-manager/new-vm]
+firmware='uefi'
+
+[org/virt-manager/virt-manager/stats]
+enable-disk-poll=true
+enable-memory-poll=true
+enable-net-poll=true
+
+[org/virt-manager/virt-manager/vmlist-fields]
+disk-usage=true
+host-cpu-usage=true
+memory-usage=true
+network-traffic=true

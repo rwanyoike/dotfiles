@@ -1,0 +1,5 @@
+---
+
+gui:
+  mouseEvents: false
+  nerdFontsVersion: "3"

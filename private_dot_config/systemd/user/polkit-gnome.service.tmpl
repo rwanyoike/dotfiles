@@ -1,0 +1,15 @@
+[Unit]
+Description=PolicyKit authentication agent
+PartOf=sway-session.target
+After=sway-session.target
+ConditionEnvironment=WAYLAND_DISPLAY
+
+[Service]
+{{- if (eq .chezmoi.osRelease.id "arch") }}
+ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+{{- else }}
+ExecStart=/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+{{- end }}
+
+[Install]
+WantedBy=sway-session.target
