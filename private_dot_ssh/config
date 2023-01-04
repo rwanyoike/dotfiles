@@ -1,2 +1,10 @@
+# Include the specified configuration file(s)
+Include config.d/*
+
+# Specifies whether keys should be automatically added to a running ssh-agent
 AddKeysToAgent ask
+
+# Sets a timeout interval in seconds after which if no data has been received
+# from the server, ssh will send a message through the encrypted channel to
+# request a response from the server
 ServerAliveInterval 60

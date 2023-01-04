@@ -1,0 +1,11 @@
+input type:keyboard {
+  xkb_layout shift_l_pc105
+}
+
+output eDP-1 {
+  pos 0 0
+}
+
+output DP-3 {
+  pos 1920 0
+}

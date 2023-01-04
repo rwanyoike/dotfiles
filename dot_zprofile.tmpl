@@ -1,65 +1,29 @@
-# Ref: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
-#      https://wiki.archlinux.org/title/XDG_Base_Directory
-export XDG_CACHE_HOME="${HOME}/.cache"
-export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_DATA_HOME="${HOME}/.local/share"
-export XDG_STATE_HOME="${HOME}/.local/state"
-
-# Ref: https://wiki.archlinux.org/index.php/Environment_variables
-export EDITOR=vim
-export VISUAL="${EDITOR}"
-
 export PATH="${HOME}/.local/bin:${PATH}"
 
-{{- if (eq .chezmoi.hostname "hal9000") }}
-
-# Ref: https://github.com/doomemacs/doomemacs#install
-export PATH="${HOME}/.emacs.d/bin:${PATH}"
-# Ref: https://github.com/yarnpkg/yarn
-export PATH="${HOME}/.yarn/bin:${PATH}"
-
-# Ref: https://github.com/zsh-users/zsh-syntax-highlighting
-export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets line)
-# Ref: https://github.com/djui/alias-tips
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT="☼ "
-
-# Ref: https://wiki.archlinux.org/index.php/Environment_variables
-export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
-
-# Ref: https://github.com/swaywm/sway/issues/3716#issuecomment-503991671
-export vblank_mode=0
-
-# Ref: https://github.com/swaywm/sway/issues/595
-#      https://wiki.archlinux.org/index.php/Java_Runtime_Environment_fonts
-export _JAVA_AWT_WM_NONREPARENTING=1
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.systemlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
-
-# Ref: https://github.com/mozilla/gecko-dev/blob/710d6e1/toolkit/xre/nsAppRunner.cpp#L3601
-#      https://wiki.archlinux.org/index.php/Firefox/Tweaks
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_WEBRENDER=1
-export MOZ_DBUS_REMOTE=1
-
-# Ref: https://wiki.archlinux.org/index.php/qt
-#      https://wiki.archlinux.org/index.php/Wayland
-export QT_QPA_PLATFORM=wayland-egl
-export QT_QPA_PLATFORMTHEME=gnome
-export QT_STYLE_OVERRIDE=kvantum-dark
-
-{{- else }}
-
-# Ref: https://github.com/NixOS/nix
-source "${HOME}/.nix-profile/etc/profile.d/nix.sh"
-
-# Ref: https://github.com/NixOS/nix/issues/599
-#      https://github.com/NixOS/nixpkgs/issues/8398
-export LOCALE_ARCHIVE="${HOME}/.nix-profile/lib/locale/locale-archive"
-
-# Ref: https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
-export ZSH="${HOME}/.nix-profile/share/oh-my-zsh"
-
-# export TERM=tmux-256color
-{{- end }}
+# Ref: https://wiki.archlinux.org/title/Systemd/User
+#      https://wiki.archlinux.org/title/Environment_variables
+dbus-update-activation-environment --systemd PATH
+export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator | sed '/:$/d; /^$/d' | xargs)
+# set -o allexport
+# eval "$(systemctl --user show-environment)"
+# set +o allexport
 
 # Ref: https://github.com/funtoo/keychain
 eval "$(keychain --eval --systemd)"
+
+# Ref: https://github.com/ohmyzsh/ohmyzsh
+export ZSH="${HOME}/.nix-profile/share/oh-my-zsh"
+export ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
+
+{{- if (not .headless) }}
+
+# Ref: https://wiki.archlinux.org/title/SSH_keys
+export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
+
+# Ref: https://github.com/swaywm/sway/issues/3716#issuecomment-503991671
+# export vblank_mode=0
+
+# Ref: https://wiki.archlinux.org/title/Qt
+export QT_QPA_PLATFORMTHEME=qt6ct
+
+{{- end }}
