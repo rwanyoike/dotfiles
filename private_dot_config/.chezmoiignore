@@ -9,7 +9,10 @@
 !fontconfig/
 !git/
 !lazygit/
+!pypoetry/
+!sqlite3
 !tmux/
+!yazi/
 
 !.curlrc
 
