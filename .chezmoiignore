@@ -7,15 +7,13 @@ README.md
 *
 
 !.config/
+!.gnupg/
+!.local/
 !.ssh/
-!.local
+!.tmux/
+!.vim_runtime/
+
 !.p10k.zsh
-!.sqliterc
-!.terraformrc
-!.tmux
-!.tmux.conf
-!.tmux.conf.local
-!.vim_runtime
 !.vimrc
 !.vimrc.local
 !.zlogout

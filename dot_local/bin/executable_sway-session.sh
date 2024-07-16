@@ -6,8 +6,8 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 
-SESSION_TARGET="sway-session.target"
-SESSION_SHUTDOWN_TARGET="sway-session-shutdown.target"
+SESSION_TARGET=sway-session.target
+SESSION_SHUTDOWN_TARGET=sway-session-shutdown.target
 VARIABLES="DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE"
 
 if systemctl --user -q is-active ${SESSION_TARGET}; then

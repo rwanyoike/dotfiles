@@ -28,7 +28,6 @@ source "${HOME}/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # Ref: https://github.com/zsh-users/zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-# zsh-syntax-highlighting must be loaded after executing compinit command
 source "${HOME}/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Ref: https://github.com/zsh-users/zsh-history-substring-search
