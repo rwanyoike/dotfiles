@@ -4,9 +4,6 @@ export PATH="${HOME}/.local/bin:${PATH}"
 #      https://wiki.archlinux.org/title/Environment_variables
 dbus-update-activation-environment --systemd PATH
 export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator | sed '/:$/d; /^$/d' | xargs)
-# set -o allexport
-# eval "$(systemctl --user show-environment)"
-# set +o allexport
 
 # Ref: https://github.com/funtoo/keychain
 eval "$(keychain --eval --systemd)"
@@ -17,13 +14,13 @@ export ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 
 {{- if (not .headless) }}
 
+# Ref: https://wiki.archlinux.org/title/Qt
+export QT_QPA_PLATFORMTHEME=qt6ct
+
 # Ref: https://wiki.archlinux.org/title/SSH_keys
 export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
 
 # Ref: https://github.com/swaywm/sway/issues/3716#issuecomment-503991671
 # export vblank_mode=0
-
-# Ref: https://wiki.archlinux.org/title/Qt
-export QT_QPA_PLATFORMTHEME=qt6ct
 
 {{- end }}
