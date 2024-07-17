@@ -1,3 +1,7 @@
+# Ref: https://github.com/Hummer12007/brightnessctl/issues/82
+bindsym --locked XF86MonBrightnessUp exec brightnessctl --min-value=156 set 2%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl --min-value=156 set 2%-
+
 input type:keyboard {
   xkb_model chromebook
   xkb_options caps:capslock
