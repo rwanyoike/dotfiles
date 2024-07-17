@@ -132,7 +132,7 @@ bindsym --locked XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec $menu
 bindsym --release Print exec /usr/share/sway-contrib/grimshot --notify savecopy anything ~/pictures/screenshot.png
 bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | wl-copy"
-bindsym $mod+Shift+v exec clipman pick -t rofi
+bindsym $mod+Shift+v exec cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy
 bindsym $mod+Shift+m exec rofimoji
 bindsym Ctrl+Shift+Delete exec swaylock -f
 # ---

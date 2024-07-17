@@ -10,14 +10,14 @@ type = "archive"
 url = "https://github.com/yazi-rs/plugins/archive/refs/heads/main.tar.gz"
 stripComponents = 1
 include = ["*/full-border.yazi/**"]
-refreshPeriod = "672h"
+refreshPeriod = "672h" # 4w
 
 # Ref: https://github.com/imsi32/yatline.yazi
 [".config/yazi/plugins/yatline.yazi"]
 type = "archive"
 url = "https://github.com/imsi32/yatline.yazi/archive/refs/heads/main.tar.gz"
 stripComponents = 1
-refreshPeriod = "672h"
+refreshPeriod = "672h" # 4w
 
 # Ref: https://github.com/ryanoasis/nerd-fonts
 [".local/share/fonts/nerd-fonts-jetbrains-mono"]
@@ -27,18 +27,24 @@ exact = true
 
 # Ref: https://github.com/ritchies/zsh-exa
 [".oh-my-zsh/custom/plugins/zsh-exa"]
-type = "git-repo"
-url = "https://github.com/ritchies/zsh-exa.git"
-refreshPeriod = "672h"
+type = "archive"
+url = "https://github.com/ritchies/zsh-exa/archive/refs/heads/main.tar.gz"
+stripComponents = 1
+exact = true
+refreshPeriod = "672h" # 4w
 
 # Ref: https://github.com/gpakosz/.tmux
 [".tmux"]
-type = "git-repo"
-url = "https://github.com/gpakosz/.tmux.git"
-refreshPeriod = "672h"
+type = "archive"
+url = "https://github.com/gpakosz/.tmux/archive/refs/heads/master.tar.gz"
+stripComponents = 1
+exact = true
+refreshPeriod = "672h" # 4w
 
 # Ref: https://github.com/amix/vimrc
 [".vim_runtime"]
-type = "git-repo"
-url = "https://github.com/amix/vimrc.git"
-refreshPeriod = "672h"
+type = "archive"
+url = "https://github.com/amix/vimrc/archive/refs/heads/master.tar.gz"
+stripComponents = 1
+exact = true
+refreshPeriod = "672h" # 4w
