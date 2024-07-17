@@ -1,3 +1,7 @@
+# Ref: https://github.com/Hummer12007/brightnessctl/issues/82
+bindsym --locked XF86MonBrightnessUp exec brightnessctl --min-value=1920 set 2%+
+bindsym --locked XF86MonBrightnessDown exec brightnessctl --min-value=1920 set 2%-
+
 input type:keyboard {
   xkb_layout shift_l_pc105
 }
