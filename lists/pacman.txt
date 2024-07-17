@@ -12,7 +12,7 @@ brightnessctl
 buildah
 calibre
 chromium
-clipman
+cliphist
 compsize
 dconf-editor
 deadbeef-mpris2-plugin
@@ -24,6 +24,7 @@ gammastep
 gimp
 grim
 guestfs-tools
+hunspell-en_us
 i3status-rust
 imv
 inkscape
