@@ -18,6 +18,7 @@ pkief.material-icon-theme
 qwtel.sqlite-viewer
 rust-lang.rust-analyzer
 streetsidesoftware.code-spell-checker
+tailscale.vscode-tailscale
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomoki1207.pdf
