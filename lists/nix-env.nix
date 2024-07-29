@@ -39,6 +39,7 @@ with import <nixpkgs> {}; [
   oh-my-zsh
   ouch
   p7zip
+  pandoc-cli
   rclone
   rename
   ripgrep
@@ -51,6 +52,7 @@ with import <nixpkgs> {}; [
   vim
   wireshark-cli
   yazi
+  yt-dlp
   zoxide
   zsh-autosuggestions
   zsh-history-substring-search
