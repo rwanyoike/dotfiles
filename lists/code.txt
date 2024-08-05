@@ -22,3 +22,4 @@ tailscale.vscode-tailscale
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomoki1207.pdf
+vadimcn.vscode-lldb
