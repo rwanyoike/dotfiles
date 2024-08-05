@@ -22,6 +22,7 @@ firefox
 fwupd
 gammastep
 gimp
+gpxsee
 grim
 guestfs-tools
 hunspell-en_us
@@ -48,7 +49,7 @@ obs-studio
 pavucontrol
 pipewire-pulse
 playerctl
-podman
+podman-compose
 polkit-gnome
 postgresql-libs
 powertop
@@ -70,6 +71,8 @@ tenacity
 testdisk
 tlp
 trippy
+unzip
+ventoy
 virt-manager
 vnstat
 wavemon

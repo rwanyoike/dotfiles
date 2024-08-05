@@ -5,19 +5,19 @@
 # clone.args = ["--depth", "1"]
 
 # Ref: https://github.com/yazi-rs/plugins
-[".config/yazi/plugins"]
-type = "archive"
-url = "https://github.com/yazi-rs/plugins/archive/refs/heads/main.tar.gz"
-stripComponents = 1
-include = ["*/full-border.yazi/**"]
-refreshPeriod = "672h" # 4w
+# [".config/yazi/plugins"]
+# type = "archive"
+# url = "https://github.com/yazi-rs/plugins/archive/refs/heads/main.tar.gz"
+# stripComponents = 1
+# include = ["*/full-border.yazi/**"]
+# refreshPeriod = "672h" # 4w
 
 # Ref: https://github.com/imsi32/yatline.yazi
-[".config/yazi/plugins/yatline.yazi"]
-type = "archive"
-url = "https://github.com/imsi32/yatline.yazi/archive/refs/heads/main.tar.gz"
-stripComponents = 1
-refreshPeriod = "672h" # 4w
+# [".config/yazi/plugins/yatline.yazi"]
+# type = "archive"
+# url = "https://github.com/imsi32/yatline.yazi/archive/refs/heads/main.tar.gz"
+# stripComponents = 1
+# refreshPeriod = "672h" # 4w
 
 # Ref: https://github.com/ryanoasis/nerd-fonts
 [".local/share/fonts/nerd-fonts-jetbrains-mono"]
