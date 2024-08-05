@@ -13,9 +13,11 @@ with import <nixpkgs> {}; [
   exiftool
   eza
   fastfetch
+  fava
   fd
   fdupes
   figlet
+  fq
   fzf
   gdu
   gh
