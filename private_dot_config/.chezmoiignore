@@ -3,6 +3,9 @@
 *
 
 !bat/
+{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+!Code/
+{{- end }}
 !doom/
 !emacs/
 !environment.d/
