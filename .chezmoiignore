@@ -9,6 +9,7 @@ README.md
 !.config/
 !.gnupg/
 !.local/
+!.oh-my-zsh/
 !.ssh/
 !.tmux/
 !.vim_runtime/
