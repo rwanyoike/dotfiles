@@ -41,7 +41,7 @@ with import <nixpkgs> {}; [
   oh-my-zsh
   ouch
   p7zip
-  pandoc-cli
+  pandoc
   rclone
   rename
   ripgrep
