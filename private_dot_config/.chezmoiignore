@@ -3,20 +3,24 @@
 *
 
 !bat/
-{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
-!Code/
-{{- end }}
 !doom/
 !emacs/
 !environment.d/
 !fontconfig/
 !git/
 !lazygit/
+!mise/
 !pypoetry/
 !sqlite3
 !tmux/
 !yazi/
 
 !.curlrc
+!user-dirs.dirs
+
+{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+!alacritty/
+!Code/
+{{- end }}
 
 {{- end }}
