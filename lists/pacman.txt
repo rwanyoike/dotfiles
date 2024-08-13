@@ -24,9 +24,11 @@ gammastep
 gimp
 gpxsee
 grim
+gsmartcontrol
 guestfs-tools
 hunspell-en_us
 i3status-rust
+impala
 imv
 inkscape
 intel-media-driver
