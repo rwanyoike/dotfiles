@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-# dconf.ini hash: {{ includeTemplate "lists/dconf.ini.tmpl" . | sha256sum }}
+# dconf.ini hash: {{ includeTemplate "packages/dconf.ini.tmpl" . | sha256sum }}
 dconf load / <<EOF
-{{ includeTemplate "lists/dconf.ini.tmpl" . }}
+{{ includeTemplate "packages/dconf.ini.tmpl" . }}
 EOF
