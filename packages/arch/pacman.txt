@@ -17,6 +17,7 @@ compsize
 dconf-editor
 deadbeef-mpris2-plugin
 downgrade
+docker-compose
 evince
 firefox
 fwupd
@@ -43,15 +44,15 @@ mako
 man-db
 modemmanager
 mpv-mpris
-nix
 nmap
 noto-fonts-cjk
 noto-fonts-emoji
 obs-studio
 pavucontrol
+pinta
 pipewire-pulse
 playerctl
-podman-compose
+podman
 polkit-gnome
 postgresql-libs
 powertop
@@ -62,8 +63,8 @@ rofimoji
 seahorse
 snap-pac
 stress
-sway-contrib
 swaybg
+sway-contrib
 swayidle
 swaylock
 syncthing
