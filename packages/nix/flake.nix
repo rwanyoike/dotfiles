@@ -54,6 +54,7 @@
             jrnl
             keychain
             lazygit
+            lurk
             mediainfo
             miniserve
             mise
