@@ -1,4 +1,3 @@
-ani-cli-git
 kvantum-theme-libadwaita-git
 rofi-calc-git
 visual-studio-code-bin

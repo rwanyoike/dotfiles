@@ -33,10 +33,10 @@ prepend_previewers = [
   { mime = "audio/*", run = "mediainfo" },
   { mime = "video/*", run = "mediainfo" },
 
-  { mime = "application/pdf", run = "pdfinfo" },
-
   { mime = "application/x-executable", run = "readelf" },
   { mime = "application/x-pie-executable", run = "readelf" },
 
   { mime = "application/vnd.sqlite3", run = "sqlite3" },
+  { mime = "application/x-bittorrent", run = "aria2c" },
+  { mime = "application/pdf", run = "pdfinfo" },
 ]
