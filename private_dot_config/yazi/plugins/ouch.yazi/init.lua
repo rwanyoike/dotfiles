@@ -4,15 +4,15 @@ local M = {}
 
 function M:peek()
   local child = Command("ouch")
-      :args({
-        "list",
-        "--tree",
-        "--yes",
-        tostring(self.file.url),
-      })
-      :stdout(Command.PIPED)
-      :stderr(Command.PIPED)
-      :spawn()
+    :args({
+      "list",
+      "--tree",
+      "--yes",
+      tostring(self.file.url),
+    })
+    :stdout(Command.PIPED)
+    :stderr(Command.PIPED)
+    :spawn()
 
   -- if not child then
   --   return self:fallback_to_builtin()

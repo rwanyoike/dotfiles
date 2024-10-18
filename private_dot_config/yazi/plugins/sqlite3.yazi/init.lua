@@ -4,13 +4,13 @@ local M = {}
 
 function M:peek()
   local child = Command("sqlite3")
-      :args({
-        tostring(self.file.url),
-        ".schema",
-      })
-      :stdout(Command.PIPED)
-      :stderr(Command.PIPED)
-      :spawn()
+    :args({
+      tostring(self.file.url),
+      ".schema",
+    })
+    :stdout(Command.PIPED)
+    :stderr(Command.PIPED)
+    :spawn()
 
   -- if not child then
   --   return self:fallback_to_builtin()
