@@ -4,15 +4,15 @@ local M = {}
 
 function M:peek()
   local child = Command("readelf")
-      :args({
-        "--wide",
-        "--demangle",
-        "--all",
-        tostring(self.file.url),
-      })
-      :stdout(Command.PIPED)
-      :stderr(Command.PIPED)
-      :spawn()
+    :args({
+      "--wide",
+      "--demangle",
+      "--all",
+      tostring(self.file.url),
+    })
+    :stdout(Command.PIPED)
+    :stderr(Command.PIPED)
+    :spawn()
 
   -- if not child then
   --   return self:fallback_to_builtin()
