@@ -1,6 +1,10 @@
-<h1 align="center">
-  <img src="https://i.imgur.com/rEM1ASC.png" alt="dotfiles">
-</h1>
+# dotfiles
+
+> Config files to set up my personal environment how I like it.
+
+<p align="center">
+  <img src="assets/rEM1ASC.png" alt="dotfiles">
+</p>
 
 ## Requirements
 
