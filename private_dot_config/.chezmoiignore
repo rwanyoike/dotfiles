@@ -20,8 +20,10 @@
 !user-dirs.dirs
 
 {{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+
 !alacritty/
 !Code/
+
 {{- end }}
 
 {{- end }}
