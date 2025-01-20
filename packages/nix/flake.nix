@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2405.*";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.*";
   };
 
   outputs = { self, nixpkgs }:
@@ -21,6 +21,7 @@
             aria2
             asciinema
             atuin
+            bandwhich
             bat
             bottom
             chezmoi
@@ -54,6 +55,7 @@
             jrnl
             keychain
             lazygit
+            libqalculate
             lurk
             mediainfo
             miniserve
@@ -63,6 +65,7 @@
             oh-my-zsh
             ouch
             p7zip
+            pipx
             rclone
             rename
             ripgrep
@@ -72,6 +75,7 @@
             tealdeer
             tmux
             trash-cli
+            trippy
             vim
             wireshark-cli
             yazi
