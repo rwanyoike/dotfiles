@@ -25,10 +25,18 @@ type = "archive"
 url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.tar.xz"
 exact = true
 
-# Ref: https://github.com/ritchies/zsh-exa
-[".oh-my-zsh/custom/plugins/zsh-exa"]
+# Ref: https://github.com/z-shell/zsh-eza
+[".oh-my-zsh/custom/plugins/zsh-eza"]
 type = "archive"
-url = "https://github.com/ritchies/zsh-exa/archive/refs/heads/main.tar.gz"
+url = "https://github.com/z-shell/zsh-eza/archive/refs/heads/main.tar.gz"
+stripComponents = 1
+exact = true
+refreshPeriod = "672h" # 4w
+
+# Ref: https://github.com/MichaelAquilina/zsh-you-should-use
+[".oh-my-zsh/custom/plugins/zsh-you-should-use"]
+type = "archive"
+url = "https://github.com/MichaelAquilina/zsh-you-should-use/archive/refs/heads/master.tar.gz"
 stripComponents = 1
 exact = true
 refreshPeriod = "672h" # 4w
