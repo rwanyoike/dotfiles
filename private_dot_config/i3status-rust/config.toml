@@ -17,7 +17,7 @@ block = "music"
 format = " $icon {$combo.str(max_w:25,rot_interval:0.5) $play $next|} "
 
 [[block]]
-block = "uptime"
+block = "disk_space"
 
 [[block]]
 block = "backlight"

@@ -4,7 +4,7 @@ SAVEHIST=51200
 HISTSIZE=$(( SAVEHIST * 20 / 100 + SAVEHIST ))
 
 # Ref: https://github.com/ohmyzsh/ohmyzsh
-plugins=(zsh-exa)
+plugins=(zsh-eza zsh-you-should-use)
 source "${ZSH}/oh-my-zsh.sh"
 
 # Ref: https://github.com/atuinsh/atuin
@@ -19,9 +19,6 @@ eval "$(mise activate zsh)"
 # Ref: https://github.com/romkatv/powerlevel10k
 source "${HOME}/.nix-profile/share/zsh-powerlevel10k/powerlevel10k.zsh-theme"
 source "${HOME}/.p10k.zsh"
-
-# Ref: https://github.com/MichaelAquilina/zsh-you-should-use
-source "${HOME}/.nix-profile/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh"
 
 # Ref: https://github.com/zsh-users/zsh-autosuggestions
 source "${HOME}/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
