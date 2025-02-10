@@ -1,0 +1,9 @@
+[Context]
+filesystems=/run/tailscale;
+sockets=wayland;
+
+[Environment]
+ELECTRON_OZONE_PLATFORM_HINT=auto
+PATH=/home/rwa/.local/share/mise/installs/python/latest/bin:/home/rwa/.local/share/mise/installs/node/latest/bin:/home/rwa/.local/share/mise/installs/rust/latest/bin:/app/bin:/usr/bin
+RUSTUP_HOME=/home/rwa/.local/share/mise/installs/rust/latest
+CARGO_HOME=/home/rwa/.local/share/mise/installs/rust/latest

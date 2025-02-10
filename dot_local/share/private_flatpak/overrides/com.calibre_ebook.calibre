@@ -1,0 +1,5 @@
+[Context]
+sockets=!wayland;
+
+[Environment]
+CALIBRE_USE_SYSTEM_THEME=true

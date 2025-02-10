@@ -1,2 +1,5 @@
-[settings]
-experimental = true
+[tools]
+go = "1.23"
+node = "20.14"
+python = "3.12"
+rust = "1.81"

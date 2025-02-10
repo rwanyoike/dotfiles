@@ -11,6 +11,7 @@
 !git/
 !lazygit/
 !mise/
+!nvim/
 !pypoetry/
 !sqlite3
 !tmux/
