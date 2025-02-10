@@ -34,7 +34,6 @@
             exiftool
             eza
             fastfetch
-            fava
             fd
             fdupes
             figlet

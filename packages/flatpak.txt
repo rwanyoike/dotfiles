@@ -1,0 +1,6 @@
+com.calibre_ebook.calibre
+com.visualstudio.code
+net.ankiweb.Anki
+org.gnome.Boxes
+org.libreoffice.LibreOffice
+org.mozilla.firefox
