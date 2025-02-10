@@ -1,0 +1,7 @@
+{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+
+!flatpak/
+
+{{- end }}
+
+
