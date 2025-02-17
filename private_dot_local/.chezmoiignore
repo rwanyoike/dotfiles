@@ -1,7 +1,11 @@
+{{- if .headless }}
+
+*
+
 {{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
 
-!flatpak/
+!share/
 
 {{- end }}
 
-
+{{- end }}
