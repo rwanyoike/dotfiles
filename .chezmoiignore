@@ -12,10 +12,12 @@ README.md
 !.local/
 !.oh-my-zsh/
 !.ssh/
+!.terraform.d/
 !.tmux/
 !.vim_runtime/
 
 !.p10k.zsh
+!.terraformrc
 !.vimrc
 !.vimrc.local
 !.zlogout

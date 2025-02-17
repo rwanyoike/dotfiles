@@ -1,4 +1,16 @@
 [Default Applications]
+{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+application/epub+zip=com.calibre_ebook.calibre.ebook-viewer.desktop
+application/pdf=garcon_host_browser.desktop
+image/jpeg=garcon_host_browser.desktop
+image/png=garcon_host_browser.desktop
+image/svg+xml=garcon_host_browser.desktop
+image/webp=garcon_host_browser.desktop
+text/html=garcon_host_browser.desktop
+x-scheme-handler/chrome=garcon_host_browser.desktop
+x-scheme-handler/http=garcon_host_browser.desktop
+x-scheme-handler/https=garcon_host_browser.desktop
+{{- else }}
 application/epub+zip=calibre-ebook-viewer.desktop
 application/pdf=org.gnome.Evince.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop
@@ -16,16 +28,4 @@ text/html=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
-
-[Added Associations]
-application/x-extension-htm=firefox.desktop;
-application/x-extension-html=firefox.desktop;
-application/x-extension-shtml=firefox.desktop;
-application/x-extension-xht=firefox.desktop;
-application/x-extension-xhtml=firefox.desktop;
-application/xhtml+xml=firefox.desktop;
-text/html=firefox.desktop;
-text/x-log=code.desktop;
-x-scheme-handler/chrome=firefox.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+{{- end }}

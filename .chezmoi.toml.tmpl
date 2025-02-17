@@ -1,11 +1,13 @@
 {{- $name := promptStringOnce . "name" "Name (user.name)" -}}
 {{- $email := promptStringOnce . "email" "Email address (user.email)" -}}
 {{- $headless := promptBoolOnce . "headless" "Is this machine headless" -}}
+{{- $github := promptStringOnce . "github" "Github username" -}}
 
 [data]
 name = {{ $name | quote }}
 email = {{ $email | quote }}
 headless = {{ $headless }}
+github = {{ $github | quote }}
 
 [data.font]
 fixed = "Monospace"
