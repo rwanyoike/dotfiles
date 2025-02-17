@@ -8,7 +8,7 @@ plugins=(zsh-eza zsh-you-should-use)
 source "${ZSH}/oh-my-zsh.sh"
 
 # Ref: https://github.com/atuinsh/atuin
-eval "$(atuin init zsh --disable-up-arrow --disable-ctrl-r)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # Ref: https://github.com/ajeetdsouza/zoxide
 eval "$(zoxide init zsh)"
