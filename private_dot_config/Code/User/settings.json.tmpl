@@ -1,21 +1,34 @@
 {
-  // "editor.emptySelectionClipboard": false,
+  "editor.emptySelectionClipboard": false,
   "editor.fontFamily": "{{ .font.fixed }}",
   "editor.fontLigatures": true,
-  // "editor.quickSuggestions": { "strings": true },
   "editor.renderWhitespace": "all",
   "editor.rulers": [80, 88, 120],
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    ".env": "properties",
+    ".env.*": "properties"
+  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  // "search.searchOnType": false,
+  "search.searchOnType": false,
   "telemetry.telemetryLevel": "off",
   "window.menuBarVisibility": "toggle",
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
 {{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "/app/bin/host-spawn",
+      "args": ["zsh", "-l"],
+      "icon": "terminal-bash",
+      "overrideName": true
+    }
+  },
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 0.5
 {{- else }}
