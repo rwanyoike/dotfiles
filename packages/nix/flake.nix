@@ -30,7 +30,6 @@
             delta
             doggo
             duf
-            emacs-nox
             exiftool
             eza
             fastfetch
