@@ -1,15 +1,23 @@
+{{- $choices := list "linux" "server" "darwin" "crostini" -}}
+
 {{- $name := promptStringOnce . "name" "Name (user.name)" -}}
 {{- $email := promptStringOnce . "email" "Email address (user.email)" -}}
-{{- $headless := promptBoolOnce . "headless" "Is this machine headless" -}}
+{{- $hosttype := promptChoiceOnce . "hosttype" "What type of host" $choices -}}
 {{- $github := promptStringOnce . "github" "Github username" -}}
 
 [data]
 name = {{ $name | quote }}
 email = {{ $email | quote }}
-headless = {{ $headless }}
+hosttype = {{ $hosttype | quote }}
 github = {{ $github | quote }}
 
 [data.font]
+{{- if (eq .chezmoi.os "darwin") }}
+fixed = "JetBrainsMono Nerd Font"
+general = "Sans Serif"
+size = 14
+{{- else }}
 fixed = "Monospace"
 general = "Sans Serif"
 size = 11
+{{- end }}

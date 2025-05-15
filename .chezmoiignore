@@ -1,14 +1,6 @@
-assets/
-packages/
-
-README.md
-
-{{- if .headless }}
-
 *
 
 !.config/
-!.gnupg/
 !.local/
 !.oh-my-zsh/
 !.ssh/
@@ -23,5 +15,22 @@ README.md
 !.zlogout
 !.zprofile
 !.zshrc
+
+{{- if (eq .chezmoi.config.data.hosttype "darwin") }}
+
+!Library/
+
+{{- else }}
+
+!.gnupg/
+
+{{- end }}
+
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
+
+!pictures/
+
+!.zlogin
+!dconf-load.sh
 
 {{- end }}

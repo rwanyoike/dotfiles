@@ -17,5 +17,10 @@
 
 [user]
   useConfigOnly = true
-  email = {{ .email }}
   name = {{ .name }}
+
+[includeIf "gitdir:**/self/**"]
+  path = self/config
+
+[includeIf "gitdir:**/work/**"]
+  path = work/config

@@ -16,6 +16,13 @@ eval "$(zoxide init zsh)"
 # Ref: https://github.com/jdx/mise
 eval "$(mise activate zsh)"
 
+{{- if (eq .chezmoi.config.data.hosttype "darwin") }}
+
+# Ref: https://github.com/Homebrew/install
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+{{- end }}
+
 # Ref: https://github.com/romkatv/powerlevel10k
 source "${HOME}/.nix-profile/share/zsh-powerlevel10k/powerlevel10k.zsh-theme"
 source "${HOME}/.p10k.zsh"

@@ -1,11 +1,14 @@
-{{- if .headless }}
-
 *
 
-{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
 
+!bin/
 !share/
 
 {{- end }}
+
+{{- if (eq .chezmoi.config.data.hosttype "crostini") }}
+
+!share/
 
 {{- end }}

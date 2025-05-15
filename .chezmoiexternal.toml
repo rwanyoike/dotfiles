@@ -19,11 +19,15 @@
 # stripComponents = 1
 # refreshPeriod = "672h" # 4w
 
+{{- if (ne .chezmoi.config.data.hosttype "darwin") }}
+
 # Ref: https://github.com/ryanoasis/nerd-fonts
 [".local/share/fonts/nerd-fonts-jetbrains-mono"]
 type = "archive"
 url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.tar.xz"
 exact = true
+
+{{- end }}
 
 # Ref: https://github.com/z-shell/zsh-eza
 [".oh-my-zsh/custom/plugins/zsh-eza"]

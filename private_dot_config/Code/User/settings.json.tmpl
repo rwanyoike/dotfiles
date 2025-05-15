@@ -1,6 +1,6 @@
 {
   "editor.emptySelectionClipboard": false,
-  "editor.fontFamily": "{{ .font.fixed }}",
+  "editor.fontFamily": "{{ .chezmoi.config.data.font.fixed }}",
   "editor.fontLigatures": true,
   "editor.renderWhitespace": "all",
   "editor.rulers": [80, 88, 120],
@@ -13,12 +13,10 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "search.searchOnType": false,
-  "telemetry.telemetryLevel": "off",
-  "window.menuBarVisibility": "toggle",
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  // "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
-{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+{{- if (eq .chezmoi.config.data.hosttype "crostini") }}
   "terminal.integrated.allowChords": false,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.profiles.linux": {
@@ -29,10 +27,17 @@
       "overrideName": true
     }
   },
+  "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 0.5
-{{- else }}
-  // "terminal.integrated.inheritEnv": false,
-  "window.zoomLevel": 1.1
+  "window.zoomLevel": 0.5,
 {{- end }}
+{{- if (eq .chezmoi.config.data.hosttype "darwin") }}
+  "editor.fontSize": {{ .chezmoi.config.data.font.size }},
+  "terminal.integrated.fontSize": {{ .chezmoi.config.data.font.size }},
+{{- end }}
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 1.1,
+{{- end }}
+  "telemetry.telemetryLevel": "off"
 }

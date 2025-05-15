@@ -1,8 +1,8 @@
 [org/gnome/desktop/interface]
 color-scheme='prefer-dark'
-font-name='{{ .font.general }} {{ .font.size }}'
+font-name='{{ .chezmoi.config.data.font.general }} {{ .chezmoi.config.data.font.size }}'
 gtk-theme='adw-gtk3-dark'
-monospace-font-name='{{ .font.fixed }} {{ .font.size }}'
+monospace-font-name='{{ .chezmoi.config.data.font.fixed }} {{ .chezmoi.config.data.font.size }}'
 
 [org/gtk/settings/file-chooser]
 sort-directories-first=true
