@@ -1,19 +1,32 @@
 export PATH="${HOME}/.local/bin:${PATH}"
 export FPATH="${HOME}/.nix-profile/share/zsh/site-functions:${FPATH}"
 
+{{- if (eq .chezmoi.config.data.hosttype "darwin") }}
+
+# Ref: https://github.com/Homebrew/install
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+{{- else }}
+
 # Ref: https://wiki.archlinux.org/title/Systemd/User
 #      https://wiki.archlinux.org/title/Environment_variables
 dbus-update-activation-environment --systemd PATH
 export $(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator | sed '/:$/d; /^$/d' | xargs)
 
+{{- end }}
+
 # Ref: https://github.com/funtoo/keychain
+{{- if (ne .chezmoi.config.data.hosttype "darwin") }}
 eval "$(keychain --eval --systemd)"
+{{- else }}
+eval "$(keychain --eval)"
+{{- end }}
 
 # Ref: https://github.com/ohmyzsh/ohmyzsh
 export ZSH="${HOME}/.nix-profile/share/oh-my-zsh"
 export ZSH_CUSTOM="${HOME}/.oh-my-zsh/custom"
 
-{{- if (not .headless) }}
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
 
 # Ref: https://wiki.archlinux.org/title/Qt
 export QT_QPA_PLATFORMTHEME=qt6ct
@@ -22,6 +35,6 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export SSH_ASKPASS=/usr/lib/seahorse/ssh-askpass
 
 # Ref: https://github.com/swaywm/sway/issues/3716#issuecomment-503991671
-# export vblank_mode=0
+export vblank_mode=0
 
 {{- end }}
