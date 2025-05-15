@@ -1,5 +1,5 @@
 [Default Applications]
-{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+{{- if (eq .chezmoi.config.data.hosttype "crostini") }}
 application/epub+zip=com.calibre_ebook.calibre.ebook-viewer.desktop
 application/pdf=garcon_host_browser.desktop
 image/jpeg=garcon_host_browser.desktop
