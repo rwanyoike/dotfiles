@@ -1,13 +1,7 @@
-{{- if .headless }}
-
 *
 
 !aria2/
 !bat/
-!doom/
-!emacs/
-!environment.d/
-!fontconfig/
 !git/
 !lazygit/
 !mise/
@@ -18,14 +12,43 @@
 !yazi/
 
 !.curlrc
-!user-dirs.dirs
 
-{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+{{- if (eq .chezmoi.config.data.hosttype "darwin") }}
 
+!alacritty/
 !Code/
 
+{{- else }}
+
+!environment.d/
+!fontconfig/
+
 !mimeapps.list
+!user-dirs.dirs
 
 {{- end }}
+
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
+
+!alacritty/
+!Code/
+!containers/
+!gammastep/
+!gtk-3.0/
+!gtk-4.0/
+!i3status-rust/
+!imv/
+!Kvantum/
+!mako/
+!mpv/
+!qt6ct/
+!rofi/
+!sway/
+!swayidle/
+!swaylock/
+!swaynag/
+!systemd/
+
+!chromium-flags.conf
 
 {{- end }}

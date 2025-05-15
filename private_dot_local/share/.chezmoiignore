@@ -1,11 +1,13 @@
-{{- if .headless }}
-
 *
 
-{{- if (hasSuffix "-penguin" .chezmoi.hostname) }}
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
 
-!flatpak/
+!applications/
 
 {{- end }}
+
+{{- if (eq .chezmoi.config.data.hosttype "crostini") }}
+
+!flatpak/
 
 {{- end }}

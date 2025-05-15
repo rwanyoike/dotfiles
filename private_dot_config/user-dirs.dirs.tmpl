@@ -11,9 +11,9 @@ XDG_TEMPLATES_DIR="$HOME/"
 XDG_PUBLICSHARE_DIR="$HOME/"
 XDG_DOCUMENTS_DIR="$HOME/"
 XDG_MUSIC_DIR="$HOME/"
-{{- if .headless }}
-XDG_PICTURES_DIR="$HOME/"
-{{- else }}
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
 XDG_PICTURES_DIR="$HOME/pictures"
+{{- else }}
+XDG_PICTURES_DIR="$HOME/"
 {{- end }}
 XDG_VIDEOS_DIR="$HOME/"

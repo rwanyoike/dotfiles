@@ -1,0 +1,8 @@
+brew "colima"
+cask "alacritty"
+cask "cloudflare-warp"
+cask "firefox"
+cask "font-jetbrains-mono-nerd-font"
+cask "tailscale"
+cask "utm"
+cask "visual-studio-code"
