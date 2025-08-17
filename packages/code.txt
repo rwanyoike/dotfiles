@@ -1,5 +1,6 @@
 bierner.markdown-mermaid
 bpruitt-goddard.mermaid-markdown-syntax-highlighting
+bradlc.vscode-tailwindcss
 charliermarsh.ruff
 cstrap.python-snippets
 davidanson.vscode-markdownlint
@@ -21,11 +22,13 @@ ms-python.python
 ms-toolsai.jupyter
 ms-vscode-remote.remote-ssh
 ms-vscode.hexeditor
+nefrob.vscode-just-syntax
 pkief.material-icon-theme
 qwtel.sqlite-viewer
-raynigon.nginx-formatter
+redhat.vscode-yaml
 rust-lang.rust-analyzer
 streetsidesoftware.code-spell-checker
+svelte.svelte-vscode
 tailscale.vscode-tailscale
 tamasfe.even-better-toml
 timonwong.shellcheck
