@@ -1,2 +1,6 @@
+[core]
+  sshCommand = "ssh -i ~/.ssh/id_ed25519_self -o IdentitiesOnly=yes -F /dev/null"
+
 [user]
+  name = {{ .name }}
   email = {{ .email }}

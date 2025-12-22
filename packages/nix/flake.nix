@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.*";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2511.*";
   };
 
   outputs = { self, nixpkgs }:
@@ -36,6 +36,7 @@
             fd
             fdupes
             figlet
+            ffmpeg
             fq
             fzf
             gdu
@@ -78,6 +79,7 @@
             wireshark-cli
             yazi
             yt-dlp
+            zellij
             zoxide
             zsh-autosuggestions
             zsh-history-substring-search

@@ -1,5 +1,5 @@
 [tools]
-go = "1.23"
-node = "22.14"
+go = "1.25"
+node = "24.12"
 python = "3.12"
-rust = "1.81"
+rust = "1.92"
