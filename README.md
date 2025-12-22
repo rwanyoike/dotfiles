@@ -1,51 +1,74 @@
 # dotfiles
 
-> Config files to set up my personal environment how I like it.
+Personal setup files managed by `chezmoi`.
 
 <p align="center">
   <img src="assets/rEM1ASC.png" alt="dotfiles">
 </p>
 
-## Requirements
+## Preparation
 
-- [`chezmoi`](https://github.com/twpayne/chezmoi)
-
-## Install
+If you are on macOS, install `git` and other basic tools needed for setup.
 
 ```shell
-cd ${HOME}
-
-# chezmoi
-curl -fsSL https://get.chezmoi.io/lb | sh -s
-~/.local/bin/chezmoi init rwanyoike/dotfiles
-~/.local/bin/chezmoi apply
-rm ~/.local/bin/chezmoi
-
-# nix
-curl -fsSL https://install.determinate.systems/nix https://install.determinate.systems/nix | sh -s -- install --nix-build-user-count 5
-nix profile install path:${HOME}/.local/share/chezmoi/packages/nix
-
-# atuin
-atuin login
-
-# zsh
-sudo chsh -s $(which zsh) <USER>
+# Install macOS Command Line Tools
+xcode-select --install
 ```
 
+## Setup
+
+### Install `chezmoi`
+
+Install `chezmoi` first. Use the official guide: [Install chezmoi](https://www.chezmoi.io/install).
+
+### Apply dotfiles
+
+Use these commands to setup your environment:
+
+```shell
+# Initialize and get dotfiles
+chezmoi init github.com/<USER>/<REPO>
+
+# Apply all configurations
+chezmoi apply
+
+```
+
+## Tools
+
+### Nix
+
+1. Install Nix using the Determinate Nix guide: [Determinate Nix Installer](https://docs.determinate.systems/determinate-nix/).
+1. Install packages listed:
+    ```shell
+    nix profile add path:${HOME}/.local/share/chezmoi/packages/nix
+    ```
+
+### Shell
+
+Set up your shell and command history.
+
+```shell
+# Set Zsh as default shell
+sudo chsh -s $(which zsh) <USER>
+
+# Log in to Atuin (history sync)
+atuin login
+```
 ### macOS
 
-```shell
-# Command Line Tools
-xcode-select --install
+Install Homebrew using the official guide: [Install Homebrew](https://brew.sh/).
 
-# homebrew
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash -c
-```
+## Other
 
 ### Crostini
 
+Install Flatpak apps:
+
 ```shell
-# flatpak
+# Add Flathub source
 flatpak remote-add --if-not-exists –user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+# Install list of apps
 cat ~/.local/share/chezmoi/packages/flatpak.txt | xargs flatpak install -y
 ```
