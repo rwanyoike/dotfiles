@@ -1,5 +1,3 @@
-bierner.markdown-mermaid
-bpruitt-goddard.mermaid-markdown-syntax-highlighting
 bradlc.vscode-tailwindcss
 charliermarsh.ruff
 cstrap.python-snippets
@@ -18,6 +16,7 @@ jnoortheen.nix-ide
 lencerf.beancount
 mechatroner.rainbow-csv
 ms-azuretools.vscode-containers
+ms-python.mypy-type-checker
 ms-python.python
 ms-toolsai.jupyter
 ms-vscode-remote.remote-ssh
@@ -34,3 +33,4 @@ tamasfe.even-better-toml
 timonwong.shellcheck
 tomoki1207.pdf
 vadimcn.vscode-lldb
+vstirbu.vscode-mermaid-preview
