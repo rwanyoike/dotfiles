@@ -17,6 +17,7 @@
 
 !alacritty/
 !Code/
+!ghostty/
 
 {{- else }}
 
