@@ -1,0 +1,7 @@
+*
+
+{{- if (eq .chezmoi.config.data.hosttype "linux") }}
+
+!executable_sway-session.sh
+
+{{- end }}

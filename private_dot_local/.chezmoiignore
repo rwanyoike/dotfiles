@@ -1,8 +1,9 @@
 *
 
+!bin/
+
 {{- if (eq .chezmoi.config.data.hosttype "linux") }}
 
-!bin/
 !share/
 
 {{- end }}

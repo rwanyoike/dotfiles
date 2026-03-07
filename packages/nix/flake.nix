@@ -52,7 +52,10 @@
             iperf
             jq
             jrnl
+            just
+            k9s
             keychain
+            kubectl
             lazygit
             libqalculate
             lurk
@@ -65,6 +68,7 @@
             ouch
             p7zip
             pipx
+            qemu
             rclone
             rename
             ripgrep
@@ -75,6 +79,7 @@
             tmux
             trash-cli
             trippy
+            uv
             vim
             wireshark-cli
             yazi
