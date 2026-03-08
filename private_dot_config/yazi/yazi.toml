@@ -1,42 +1,38 @@
 [open]
-rules = [
-  { name = "*/", use = [ "edit", "open", "reveal" ] },
-
-  { mime = "text/*", use = [ "edit", "reveal" ] },
-  { mime = "image/*", use = [ "open", "reveal" ] },
-  { mime = "audio/*", use = [ "play", "reveal" ] },
-  { mime = "video/*", use = [ "play", "reveal" ] },
-  { mime = "inode/x-empty", use = [ "edit", "reveal" ] },
-
-  { mime = "application/json", use = [ "edit", "reveal" ] },
-  { mime = "application/x-ndjson", use = [ "edit", "reveal" ] },
-  { mime = "application/javascript", use = [ "edit", "reveal" ] },
-
-  { name = "*", use = [ "open", "reveal" ] },
+prepend_rules = [
+  # Media
+  { mime = "{audio,video}/*", use = [ "open", "reveal" ] },
 ]
 
 [plugin]
 prepend_previewers = [
-  { mime = "application/*zip", run = "ouch" },
-  { mime = "application/x-7z-compressed", run = "ouch" },
-  { mime = "application/x-bzip*", run = "ouch" },
-  { mime = "application/x-lz4", run = "ouch" },
-  { mime = "application/x-rar", run = "ouch" },
-  { mime = "application/x-snappy-framed", run = "ouch" },
-  { mime = "application/x-tar", run = "ouch" },
-  { mime = "application/x-xz", run = "ouch" },
-  { mime = "application/zstd", run = "ouch" },
-
-  { mime = "image/*", run = "exiftool" },
-  { mime = "font/*", run = "exiftool" },
-
+  # Audio
   { mime = "audio/*", run = "mediainfo" },
+  # Image
+  { mime = "image/*", run = "mediainfo" },
+  # Video
   { mime = "video/*", run = "mediainfo" },
-
+  # PDF
+  { mime = "application/pdf", run = "pdfinfo" },
+  # Archive
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", run = "ouch" },
+  # Font
+  { mime = "font/*", run = "exiftool" },
+  { mime = "application/ms-opentype", run = "exiftool" },
+  # Other
+  { mime = "application/bittorrent", run = "aria2c" },
+  { mime = "application/sqlite3", run = "sqlite3" },
   { mime = "application/x-executable", run = "readelf" },
   { mime = "application/x-pie-executable", run = "readelf" },
+]
 
-  { mime = "application/vnd.sqlite3", run = "sqlite3" },
-  { mime = "application/x-bittorrent", run = "aria2c" },
-  { mime = "application/pdf", run = "pdfinfo" },
+prepend_preloaders = [
+  # Image
+  { mime = "image/*", run = "noop" },
+  # Video
+  { mime = "video/*", run = "noop" },
+  # PDF
+  { mime = "application/pdf", run = "noop" },
+  # Font
+  { mime = "font/*", run = "noop" },
 ]

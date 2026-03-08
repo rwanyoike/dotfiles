@@ -68,6 +68,7 @@
             ouch
             p7zip
             pipx
+            poppler-utils
             qemu
             rclone
             rename
