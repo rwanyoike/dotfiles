@@ -11,8 +11,9 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # Ref: https://wiki.archlinux.org/title/Environment_variables
-export EDITOR="vim"
+export EDITOR="nvim"
 export VISUAL="${EDITOR}"
+export LESS="-SRFX"
 
 {{- else }}
 
