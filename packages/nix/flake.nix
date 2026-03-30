@@ -51,14 +51,14 @@
             ipcalc
             iperf
             jq
-            jrnl
+            # jrnl
             just
             k9s
             keychain
             kubectl
             lazygit
             libqalculate
-            lurk
+            # lurk
             mediainfo
             miniserve
             mise
