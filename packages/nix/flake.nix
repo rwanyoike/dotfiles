@@ -67,6 +67,7 @@
             oh-my-zsh
             ouch
             p7zip
+            pgcli
             pipx
             poppler-utils
             qemu
