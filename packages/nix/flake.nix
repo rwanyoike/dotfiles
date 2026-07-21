@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2511.*";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2605.*";
   };
 
   outputs = { self, nixpkgs }:
@@ -51,7 +51,7 @@
             ipcalc
             iperf
             jq
-            # jrnl
+            jrnl
             just
             k9s
             keychain
