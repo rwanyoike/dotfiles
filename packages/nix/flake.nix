@@ -37,6 +37,7 @@
             fdupes
             figlet
             ffmpeg
+            fontconfig
             fq
             fzf
             gdu
@@ -68,7 +69,7 @@
             ouch
             p7zip
             pgcli
-            pipx
+            # pipx
             poppler-utils
             qemu
             rclone
